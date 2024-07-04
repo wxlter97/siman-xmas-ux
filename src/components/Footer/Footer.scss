@@ -54,6 +54,9 @@
             display: flex;
             align-items: center;
             margin-top: 1rem;
+            margin: 1px solid black;
+            justify-content: center;
+
   
             img {
               width: 24px;
@@ -69,6 +72,7 @@
             display: flex;
             gap: 0.5rem;
             margin-top: 1rem;
+            justify-content: center;
   
             svg {
               width: 24px;
@@ -116,4 +120,22 @@
   
   .phone-number {
     cursor: pointer;
+  }
+
+  .talk-to-an-expert {
+    background-color: #7A232E;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
+
+
+    .expert-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }

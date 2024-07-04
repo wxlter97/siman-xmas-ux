@@ -3,10 +3,15 @@
 import React, { useState, useEffect } from "react";
 import "./Home.scss";
 import Hero from "../../assets/images/Hero.png";
+import HeroMobile from "../../assets/images/mobile/Hero.jpg";
 import Banner1 from "../../assets/images/sections/01_berry/banner.png";
+import Banner1Mobile from "../../assets/images/mobile/B1/B1-banner.png";
 import Banner2 from "../../assets/images/sections/02_holi/banner.png";
+import Banner2Mobile from "../../assets/images/mobile/B2/B2-Banner.png";
 import Banner3 from "../../assets/images/sections/03_candy/banner.png";
+import Banner3Mobile from "../../assets/images/mobile/B3/B3-Banner.png";
 import Banner4 from "../../assets/images/sections/04_wonderful/banner.png";
+import Banner4Mobile from "../../assets/images/mobile/B4/B4-Banner.png";
 import SectionDivider from "../../components/SectionDivider/SectionDivider";
 import SectionGrid from "../../components/SectionGrid/SectionGrid";
 import CategoryCarousel from "../../components/CategoryCarousel/CategoryCarousel";
@@ -17,88 +22,128 @@ const categories = {
     {
       name: "Berry Christmas",
       image: require("../../assets/images/categories/collections/01.png"),
+      link: "collections/berry",
     },
     {
       name: "Candyland",
       image: require("../../assets/images/categories/collections/02.png"),
+      link: "collections/candyland",
     },
     {
       name: "Christmas Valley",
       image: require("../../assets/images/categories/collections/03.png"),
+      link: "collections/christmas-valley",
     },
     {
       name: "Hello Fall",
       image: require("../../assets/images/categories/collections/04.png"),
+      link: "collections/hello-fall",
     },
     {
       name: "Holiday Winter",
       image: require("../../assets/images/categories/collections/05.png"),
+      link: "collections/holiday-winter",
     },
     {
       name: "Magical Forest",
       image: require("../../assets/images/categories/collections/06.png"),
+      link: "collections/magical-forest",
     },
     {
       name: "Reason of the Season",
       image: require("../../assets/images/categories/collections/07.png"),
+      link: "collections/reason-of-the-season",
     },
     {
       name: "Wonderful Time",
       image: require("../../assets/images/categories/collections/08.png"),
+      link: "collections/wonderful-time",
     },
   ],
   products: [
     {
-      name: "Christmas Tree",
+      name: "Árboles, guirnaldas...",
       image: require("../../assets/images/categories/products/01.png"),
+      link: "products/christmas-tree",
     },
     {
-      name: "Christmas Ornaments",
+      name: "Nacimientos",
       image: require("../../assets/images/categories/products/02.png"),
+      link: "products/christmas-ornaments",
     },
     {
-      name: "Christmas Lights",
+      name: "Luces",
       image: require("../../assets/images/categories/products/03.png"),
+      link: "products/christmas-lights",
     },
     {
-      name: "Christmas Decor",
+      name: "Adornos",
       image: require("../../assets/images/categories/products/04.png"),
+      link: "products/christmas-decor",
+    },
+    {
+      name: "Adornos de mesa",
+      image: require("../../assets/images/categories/products/05.png"),
+      link: "products/christmas-gifts",
+    },
+    {
+      name: "Textiles navideños",
+      image: require("../../assets/images/categories/products/06.png"),
+      link: "products/christmas-table",
+    },
+    {
+      name: "Cocina navideña",
+      image: require("../../assets/images/categories/products/07.png"),
+      link: "products/christmas-stationery",
+    },
+    {
+      name: "Vajillas y piezas de servir",
+      image: require("../../assets/images/categories/products/08.png"),
+      link: "products/christmas-tree",
     },
   ],
   colors: [
     {
-      name: "Red",
+      name: "Dorado",
       image: require("../../assets/images/categories/colors/01.png"),
+      link: "colors/dorado",
     },
     {
-      name: "Green",
+      name: "Rojo oscuro",
       image: require("../../assets/images/categories/colors/02.png"),
+      link: "colors/rojo-oscuro",
     },
     {
-      name: "Gold",
+      name: "Rojo",
       image: require("../../assets/images/categories/colors/03.png"),
+      link: "colors/rojo",
     },
     {
-      name: "Silver",
+      name: "Verde",
       image: require("../../assets/images/categories/colors/04.png"),
+      link: "colors/verde",
     },
   ],
   fashion: [
     {
       name: "Damas",
       image: "Damas",
+      link: "fashion/damas",
     },
     {
       name: "Caballeros",
       image: "Caballeros",
+      link: "fashion/caballeros",
     },
     {
       name: "Niños",
       image: "Niños",
+      link: "fashion/niños",
     },
     {
       name: "Accesorios",
       image: "Accesorios",
+      link: "fashion/accesorios",
     },
   ],
 };
@@ -108,7 +153,7 @@ function getImages(folder_name, grid) {
 
   // Banner principal
   images.push({
-    src: require(`../../assets/images/sections/` + folder_name + `/main.png`),
+    src: require(`../../assets/images/` + folder_name + `/main.png`),
     col: 3,
     row: 1,
   });
@@ -117,7 +162,7 @@ function getImages(folder_name, grid) {
 
   for (let i = 1; i <= grid.length; i++) {
     images.push({
-      src: require(`../../assets/images/sections/` +
+      src: require(`../../assets/images/` +
         folder_name +
         `/block_0` +
         i +
@@ -140,8 +185,9 @@ function Home() {
 
   return (
     <div className="hero">
-      <img src={Hero} alt="Hero" className="hero-image" />
-      <div className="filtros-container">
+      <img src={Hero} alt="Hero" className="object-cover h-64 hidden md:flex" />
+      <img src={HeroMobile} alt="Hero" className="h-full md:hidden" />
+      <div className="filtros-container hidden md:inline-flex">
         <div className="text-hero">Compra por</div>
         <div className="chips-container">
           <div
@@ -202,15 +248,15 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="carousel">
+      <div className="carousel hidden md:flex">
         <CategoryCarousel categories={subCategories} />
       </div>
-      <div className="container w-11/12 mx-auto">
+      <div className="mx-auto hidden md:block md:w-9/12 lg:w-3/4">
         <SectionDivider img={Banner1} />
         <SectionGrid
-          imgs={getImages("01_berry", [1, 2, 2, 1])}
+          imgs={getImages("sections/01_berry", [1, 2, 2, 1])}
           tags={[
-            { top: "15%", left: "15%" },
+            { top: "15%", left: "15%", link: "/berry" },
             { top: "40%", left: "19%" },
             { top: "30%", left: "40%" },
             { top: "39%", left: "68%" },
@@ -218,28 +264,43 @@ function Home() {
             { top: "85%", left: "25%" },
           ]}
         />
+        <SectionGrid
+          imgs={getImages("mobile/B5", [3, 3, 3])}
+          horizontal="true"
+          mobile="false"
+        />
         <div
-          className="CopyParaNavidad"
-          style={{
-            textAlign: "center",
-            color: "black",
-            fontSize: 30,
-            fontFamily: "Abhaya Libre",
-            fontWeight: "400",
-            lineHeight: 5,
-            letterSpacing: 0.15,
-            wordWrap: "break-word",
-          }}
+          className="copy-navidad"
         >
-          ¡Descubre la magia de la Navidad con SIMÁN: regalos únicos,
-          decoraciones encantadoras y momentos inolvidables! 🎄🎁✨
+          ¡Descubre la magia de la Navidad con SIMÁN! 🎄🎁✨
         </div>
         <SectionDivider img={Banner2} />
-        <SectionGrid imgs={getImages("02_holi", [2, 1, 1, 2])} />
+        <SectionGrid imgs={getImages("sections/02_holi", [2, 1, 2, 1])} />
         <SectionDivider img={Banner3} />
-        <SectionGrid imgs={getImages("03_candy", [1, 2, 1, 2])} />
+        <SectionGrid imgs={getImages("sections/03_candy", [2, 2, 1, 1])} />
         <SectionDivider img={Banner4} />
-        <SectionGrid imgs={getImages("04_wonderful", [1, 1, 2, 2])} />
+        <SectionGrid imgs={getImages("sections/04_wonderful", [1, 2, 2, 1])} />
+        <NewProducts />
+      </div>
+      <div className="w-11/12 mx-auto md:hidden">
+        <SectionDivider img={Banner1Mobile} />
+        <SectionGrid imgs={getImages("mobile/B1", [3, 3, 3, 3])} />
+        <div
+          className="copy-navidad"
+        >
+          ¡Descubre la magia de la Navidad con SIMÁN! 🎄🎁✨
+        </div>
+        <SectionGrid
+          imgs={getImages("mobile/B5", [3, 3, 3])}
+          horizontal="true"
+          mobile="true"
+        />
+        <SectionDivider img={Banner2Mobile} />
+        <SectionGrid imgs={getImages("mobile/B2", [3, 3, 3, 3])} />
+        <SectionDivider img={Banner3Mobile} />
+        <SectionGrid imgs={getImages("mobile/B3", [3, 3, 3, 3])} />
+        <SectionDivider img={Banner4Mobile} />
+        <SectionGrid imgs={getImages("mobile/B4", [3, 3, 3, 3])} />
         <NewProducts />
       </div>
     </div>

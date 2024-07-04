@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -27,14 +28,14 @@ const Button = styled.a`
   display: inline-block;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  background-color: #007bff;
+  background-color: #A83338;  
   color: white;
   text-decoration: none;
   border-radius: 0.25rem;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #7A232E;
   }
 `;
 
@@ -43,7 +44,7 @@ const PageNotFound = () => {
     <Container>
       <Title>404</Title>
       <Subtitle>Página no encontrada</Subtitle>
-      <Button href="/">Volver a la página principal</Button>
+      <Button as={Link} to="/">Volver al inicio</Button>
     </Container>
   );
 };

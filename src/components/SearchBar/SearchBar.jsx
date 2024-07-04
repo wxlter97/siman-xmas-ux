@@ -34,7 +34,7 @@ const SearchBar = () => {
         <input
           type="text"
           className="search-input"
-          placeholder="Buscar productos..."
+          placeholder="Haz una búsqueda en Simán"
           value={query}
           onChange={handleInputChange}
         />

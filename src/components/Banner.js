@@ -19,7 +19,7 @@ const BannerText = styled.div`
     text-align: center;
     color: white;
     font-size: 24px;
-    font-family: Roboto;
+    font-family: Clan OT;
     font-weight: 700;
     line-height: 30px;
     word-wrap: break-word;

@@ -30,7 +30,7 @@ function CategoryCarousel(props) {
       <Slider ref={sliderRef} {...settings}>
         {props.categories.map((category, index) => (
           <div key={index} className="carousel-item">
-            <div className="category-image">
+            <div className="category-image" onClick={() => window.open(category.link, "_self")}>
               {category.image.includes("/static/media/") ? (
                 <img src={category.image} alt={category.name} />
               ) : (

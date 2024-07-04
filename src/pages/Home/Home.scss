@@ -6,12 +6,6 @@
   background-color: $siman-backgroud;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .text-hero {
   text-align: center;
   color: $siman-primary;
@@ -22,10 +16,10 @@
 }
 
 .chips-container {
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  display: flex;
 }
 
 .chips-hero {
@@ -33,7 +27,7 @@
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 50px;
   border: 1px $siman-primary solid;
   justify-content: flex-start;
@@ -51,18 +45,28 @@
 }
 
 .filtros-container {
-    width: 676px;
-    height: 36px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    display: inline-flex;
-    width: 100%;
+  width: 676px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .carousel {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  display: flex;
+}
+
+.copy-navidad {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  letter-spacing: 0.15;
+  word-wrap: break-word;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }

@@ -9,6 +9,7 @@
     background-color: #7A232E;
     padding: 0.5rem;
     border-radius: 5px;
+    width: 100%;
   
     .search-icon,
     .mic-icon {
@@ -24,11 +25,13 @@
       color: white;
       font-size: 16px;
       padding: 8px;
+      width: 100%;
   
-      ::placeholder {
-        color: white;
-        opacity: 1;
-      }
+
+    }
+    ::placeholder {
+      color: white !important;
+      opacity: 1;
     }
   }
   

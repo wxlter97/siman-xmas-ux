@@ -12,11 +12,86 @@ import {
 } from "react-icons/fa";
 import LogoRed from "../../assets/images/logo_red.png";
 import FlagSv from "../../assets/images/flag_sv.png";
+import FlagGt from "../../assets/images/flag_gt.png";
+import FlagCr from "../../assets/images/flag_cr.png";
+import FlagNi from "../../assets/images/flag_ni.png";
 import PaymentMethods from "../../assets/images/payment_methods.png";
 import PagoSeguro from "../../assets/images/pago_seguro.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [country, setCountry] = useState("SV");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSubscribe = () => {
+    if (validateEmail(email)) {
+      alert("¡Gracias por suscribirte!");
+      setEmail("");
+      setError("");
+    } else {
+      setError("Por favor, introduce un correo electrónico válido.");
+    }
+  };
+
+  const handleCountryChange = (e) => {
+    setCountry(e.target.value);
+  };
+
+  const countryFlag = (country) => {
+    switch (country) {
+      case "SV":
+        return FlagSv;
+      case "GT":
+        return FlagGt;
+      case "CR":
+        return FlagCr;
+      case "NI":
+        return FlagNi;
+      default:
+        return FlagSv;
+    }
+  };
+
+  const countryName = (country) => {
+    switch (country) {
+      case "SV":
+        return "El Salvador";
+      case "GT":
+        return "Guatemala";
+      case "CR":
+        return "Costa Rica";
+      case "NI":
+        return "Nicaragua";
+      default:
+        return "El Salvador";
+    }
+  };
+
+  const currency = (country) => {
+    switch (country) {
+      case "SV":
+        return "US$";
+      case "GT":
+        return "GTQ";
+      case "CR":
+        return "CRC";
+      case "NI":
+        return "NIO";
+      default:
+        return "US$";
+    }
+  };
+
   const [expandedSection, setExpandedSection] = useState(null);
 
   const toggleSection = (section) => {
@@ -31,13 +106,20 @@ const Footer = () => {
         </div>
         <div className="footer-links gap-4 grid md:flex">
           <div className="footer-column">
-            <h4 onClick={() => toggleSection("corporativo")} className="flex justify-between items-center">
+            <h4
+              onClick={() => toggleSection("corporativo")}
+              className="flex justify-between items-center"
+            >
               SIMAN CORPORATIVO
               <span className="md:hidden">
                 {expandedSection === "corporativo" ? <FaMinus /> : <FaPlus />}
               </span>
             </h4>
-            <ul className={`md:block ${expandedSection === "corporativo" ? "block" : "hidden"}`}>
+            <ul
+              className={`md:block ${
+                expandedSection === "corporativo" ? "block" : "hidden"
+              }`}
+            >
               <li>
                 <Link to="/quienes-somos">Quiénes Somos</Link>
               </li>
@@ -56,13 +138,20 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column">
-            <h4 onClick={() => toggleSection("programas")} className="flex justify-between items-center">
+            <h4
+              onClick={() => toggleSection("programas")}
+              className="flex justify-between items-center"
+            >
               PROGRAMAS
               <span className="md:hidden">
                 {expandedSection === "programas" ? <FaMinus /> : <FaPlus />}
               </span>
             </h4>
-            <ul className={`md:block ${expandedSection === "programas" ? "block" : "hidden"}`}>
+            <ul
+              className={`md:block ${
+                expandedSection === "programas" ? "block" : "hidden"
+              }`}
+            >
               <li>
                 <Link to="/monedero">Monedero</Link>
               </li>
@@ -84,13 +173,20 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column">
-            <h4 onClick={() => toggleSection("servicio")} className="flex justify-between items-center">
+            <h4
+              onClick={() => toggleSection("servicio")}
+              className="flex justify-between items-center"
+            >
               SERVICIO AL CLIENTE
               <span className="md:hidden">
                 {expandedSection === "servicio" ? <FaMinus /> : <FaPlus />}
               </span>
             </h4>
-            <ul className={`md:block ${expandedSection === "servicio" ? "block" : "hidden"}`}>
+            <ul
+              className={`md:block ${
+                expandedSection === "servicio" ? "block" : "hidden"
+              }`}
+            >
               <li>
                 <Link to="/faq">Preguntas Frecuentes</Link>
               </li>
@@ -112,13 +208,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-column">
-            <h4 onClick={() => toggleSection("otros")} className="flex justify-between items-center">
+            <h4 className="hidden md:flex justify-between items-center">
               &nbsp;
-              <span className="md:hidden">
-                {expandedSection === "otros" ? <FaMinus /> : <FaPlus />}
-              </span>
             </h4>
-            <ul className={`md:block ${expandedSection === "otros" ? "block" : "hidden"}`}>
+            <ul
+              className={`md:block ${
+                expandedSection === "servicio" ? "block" : "hidden"
+              }`}
+            >
               <li>
                 <Link to="/devoluciones">Política de Devoluciones</Link>
               </li>
@@ -138,26 +235,63 @@ const Footer = () => {
           </div>
           <div className="vertical-line"></div>
           <div className="footer-column">
-            <h4 onClick={() => toggleSection("suscribir")} className="flex justify-between items-center">
+            <h4 className="flex justify-between items-center">
               Suscríbete para obtener las mejores ofertas
-              <span className="md:hidden">
-                {expandedSection === "suscribir" ? <FaMinus /> : <FaPlus />}
-              </span>
             </h4>
-            <div className={`md:block ${expandedSection === "suscribir" ? "block" : "hidden"}`}>
-              <input type="email" placeholder="Correo electrónico" />
-              <button>Suscribirse</button>
-              <div className="country-select">
-                <img src={FlagSv} alt="Flag" />
-                <span>El Salvador | US$</span>
+            <div>
+              <input
+                type="email"
+                placeholder="Correo electrónico"
+                value={email}
+                onChange={handleEmailChange}
+                className={`p-2 border ${
+                  error ? "border-red-500" : "border-gray-300"
+                } rounded-md`}
+              />
+              {error && <p className="text-red-500 text-sm">{error}</p>}
+              <button
+                onClick={handleSubscribe}
+                className="btn mt-2 p-2 bg-blue-500 text-white rounded-md"
+              >
+                Suscribirse
+              </button>{" "}
+              <div className="country-select mt-4">
+                <img
+                  src={countryFlag(country)}
+                  alt="Flag"
+                  className="inline-block mr-2"
+                />
+                <select
+                  value={country}
+                  onChange={handleCountryChange}
+                  className="p-2 border border-gray-300 rounded-md w-full md:w-3/4"
+                >
+                  <option value="SV">El Salvador</option>
+                  <option value="GT">Guatemala</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="NI">Nicaragua</option>
+                </select>
+                <span className="ml-2">{currency}</span>
               </div>
-              <div className="social-icons">
-                <FaFacebook />
-                <FaInstagram />
-                <FaTwitter />
-                <FaYoutube />
-                <FaGooglePlay />
-                <FaApple />
+              <div className="social-icons w-full mt-4">
+                <Link to="/facebook">
+                  <FaFacebook />
+                </Link>
+                <Link to="/instagram">
+                  <FaInstagram />
+                </Link>
+                <Link to="/twitter">
+                  <FaTwitter />
+                </Link>
+                <Link to="/youtube">
+                  <FaYoutube />
+                </Link>
+                <Link to="/google-play">
+                  <FaGooglePlay />
+                </Link>
+                <Link to="/apple">
+                  <FaApple />
+                </Link>
               </div>
             </div>
           </div>
@@ -199,6 +333,12 @@ const Footer = () => {
               contacto@siman.com
             </a>
           </p>
+        </div>
+        <div className="talk-to-an-expert">
+          <button className="btn expert-btn">
+            <FaTwitter />
+            Habla con un experto
+          </button>
         </div>
       </div>
     </footer>
