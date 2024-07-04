@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/siman-xmas-ux/static/css/main.bddfb245.css",
+    "main.js": "/siman-xmas-ux/static/js/main.bfacd4cb.js",
+    "static/js/453.a77ea548.chunk.js": "/siman-xmas-ux/static/js/453.a77ea548.chunk.js",
+    "static/media/block_04.png": "/siman-xmas-ux/static/media/block_04.406c6835ce6818f36528.png",
+    "static/media/main.png": "/siman-xmas-ux/static/media/main.2009d36e4dcca41fee82.png",
+    "static/media/block_03.png": "/siman-xmas-ux/static/media/block_03.0fa4263f6c51a1415d34.png",
+    "static/media/block_01.png": "/siman-xmas-ux/static/media/block_01.f02d7fbf719815074ea9.png",
+    "static/media/block_02.png": "/siman-xmas-ux/static/media/block_02.0324e0ac29c4b6dd4b11.png",
+    "static/media/Hero.png": "/siman-xmas-ux/static/media/Hero.981762f474569060a6fe.png",
+    "static/media/Hero.jpg": "/siman-xmas-ux/static/media/Hero.927d678dd1fed6a0dc3d.jpg",
+    "static/media/B2-Banner.png": "/siman-xmas-ux/static/media/B2-Banner.dfbd1e72ff0a3a8fb3c4.png",
+    "static/media/banner.png": "/siman-xmas-ux/static/media/banner.c9f46a53d7d8d4b81643.png",
+    "static/media/04.png": "/siman-xmas-ux/static/media/04.0b2113938c5443607658.png",
+    "static/media/07.png": "/siman-xmas-ux/static/media/07.6f51d59fb02dce940dbb.png",
+    "static/media/02.png": "/siman-xmas-ux/static/media/02.9078c40c2a261ade47e1.png",
+    "static/media/03.png": "/siman-xmas-ux/static/media/03.5fb699075fb6e7d35d9e.png",
+    "static/media/B4-Banner.png": "/siman-xmas-ux/static/media/B4-Banner.a1481a09f2642e4308f5.png",
+    "static/media/B1-banner.png": "/siman-xmas-ux/static/media/B1-banner.9c022da2b58bf4ddbe29.png",
+    "static/media/01.png": "/siman-xmas-ux/static/media/01.d8a7c9fc00da8cff537a.png",
+    "static/media/05.png": "/siman-xmas-ux/static/media/05.6384e28007065a927725.png",
+    "static/media/08.png": "/siman-xmas-ux/static/media/08.fb20c3fae20b518c9e75.png",
+    "static/media/B3-Banner.png": "/siman-xmas-ux/static/media/B3-Banner.6273f0334ee2b84fa972.png",
+    "static/media/06.png": "/siman-xmas-ux/static/media/06.5b0ef983376052e65954.png",
+    "static/media/payment_methods.png": "/siman-xmas-ux/static/media/payment_methods.32f3922b929023259e8f.png",
+    "static/media/slick.svg": "/siman-xmas-ux/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/siman-xmas-ux/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/siman-xmas-ux/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/siman-xmas-ux/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/siman-xmas-ux/index.html",
+    "main.bddfb245.css.map": "/siman-xmas-ux/static/css/main.bddfb245.css.map",
+    "main.bfacd4cb.js.map": "/siman-xmas-ux/static/js/main.bfacd4cb.js.map",
+    "453.a77ea548.chunk.js.map": "/siman-xmas-ux/static/js/453.a77ea548.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bddfb245.css",
+    "static/js/main.bfacd4cb.js"
+  ]
+}
