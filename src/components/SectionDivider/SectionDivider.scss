@@ -1,0 +1,14 @@
+.section-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    height: 100%;
+}
+
+.section-divider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

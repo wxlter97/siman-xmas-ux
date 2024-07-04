@@ -1,0 +1,101 @@
+@import "../../styles/variables.scss";
+
+/* NavBar.scss */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: $siman-primary;
+  color: #fff;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    .logo-image {
+      width: 150px;
+    }
+  }
+
+  .user-items {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .icon {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .hmb-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 0.3px solid black;
+    padding-left: 20px;
+    border-right: 0.3px solid black;
+    padding-right: 20px;
+    height: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    position: relative;
+
+    span {
+      height: 2px;
+      width: 20px;
+      background: white;
+      margin-bottom: 3px;
+    }
+  }
+
+  .hmb-menu-text {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    word-wrap: break-word;
+  }
+
+
+}
+
+.other-items {
+  justify-content: center;
+  gap: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.other-item {
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  
+}
+
+.marketplace {
+  background: rgb(133,0,198);
+  background: linear-gradient(90deg, rgba(133,0,198,1) 0%, rgba(255,122,61,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-purple {
+  color: rgb(133, 0, 198);
+}

@@ -1,0 +1,68 @@
+@import "../../styles/variables.scss";
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+  background-color: $siman-backgroud;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-hero {
+  text-align: center;
+  color: $siman-primary;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.03px;
+  word-wrap: break-word;
+}
+
+.chips-container {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.chips-hero {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #F6F6F6;
+  border-radius: 50px;
+  border: 1px $siman-primary solid;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.selected {
+  background: $siman-primary;
+}
+
+.selected-text {
+  color: white;
+}
+
+.filtros-container {
+    width: 676px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.carousel {
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}

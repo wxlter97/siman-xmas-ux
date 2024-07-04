@@ -1,0 +1,9 @@
+/* src/styles/global.scss */
+@import './variables';
+
+body {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  background-color: #f4f4f4;
+}
