@@ -30,7 +30,6 @@ function SectionGrid(props) {
         ></img>
       );
     });
-    console.log(grid.length);
   } else if (props.horizontal === "true" && props.mobile === "false") {
     grid = props.imgs.map((img, index) => {
       return (
