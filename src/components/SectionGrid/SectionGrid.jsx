@@ -5,14 +5,41 @@ import TagRed from "../../assets/images/tag_red.png";
 import { Link } from "react-router-dom";
 
 function SectionGrid(props) {
-  let grid = [];
+  let grid =
+    props.mobile === "true"
+      ? [
+          // Initial grid, 3 columns and 1 row
+          <div class="col-span-3 row-span-1">Loading...</div>,
+        ]
+      : [
+          // Initial grid, 3 columns and 2 rows
+          <div class="col-span-3 row-span-1">Loading...</div>,
+          <div class="col-span-1 row-span-2">Loading...</div>,
+          <div class="col-span-1 row-span-1">Loading...</div>,
+          <div class="col-span-1 row-span-1">Loading...</div>,
+          <div class="col-span-1 row-span-1">Loading...</div>,
+        ];
+  grid = [];
   if (props.horizontal === "true" && props.mobile === "true") {
     grid = props.imgs.map((img, index) => {
-      return <img src={img.src} alt="grid-item" className="w-3/4 pr-4 rounded-lg" />;
+      return (
+        <img
+          src={img.src}
+          alt="grid-item"
+          className="w-3/4 pr-4 rounded-lg"
+        ></img>
+      );
     });
+    console.log(grid.length);
   } else if (props.horizontal === "true" && props.mobile === "false") {
     grid = props.imgs.map((img, index) => {
-      return <img src={img.src} alt="grid-item" className="w-1/4 pr-4 rounded-lg" />;
+      return (
+        <img
+          src={img.src}
+          alt="grid-item"
+          className="w-1/4 pr-4 rounded-lg"
+        ></img>
+      );
     });
   } else {
     grid = props.imgs.map((img, index) => {
@@ -24,18 +51,18 @@ function SectionGrid(props) {
             tags.push(
               <Link to={element.link}>
                 <div className="img-container">
-                <img
-                  src={Tag}
-                  alt="tag"
-                  className="label-overlay tag hidden md:block tag-white"
-                  style={{ top: element.top, left: element.left }}
-                />
-                <img
-                  src={TagRed}
-                  alt="tag"
-                  className="label-overlay tag hidden md:block tag-red"
-                  style={{ top: element.top, left: element.left }}
-                />
+                  <img
+                    src={Tag}
+                    alt="tag"
+                    className="label-overlay tag hidden md:block tag-white"
+                    style={{ top: element.top, left: element.left }}
+                  ></img>
+                  <img
+                    src={TagRed}
+                    alt="tag"
+                    className="label-overlay tag hidden md:block tag-red"
+                    style={{ top: element.top, left: element.left }}
+                  ></img>
                 </div>
               </Link>
             );
@@ -54,8 +81,15 @@ function SectionGrid(props) {
       }
       return (
         <div class={style + " relative"} key={index}>
-          <img src={img.src} alt="grid-item" className={"grid-item-image rounded-lg " + (img.row === 1 ? " aspect-[2/1]" : " aspect-[1/1]")} />
-          {tags}
+          <img
+            src={img.src}
+            alt="grid-item"
+            className={
+              "grid-item-image rounded-lg " +
+              (img.row === 1 ? " aspect-[2/1]" : " aspect-[1/1]")
+            }
+          ></img>
+          {tags.length > 0 && tags}
         </div>
       );
     });
@@ -64,7 +98,7 @@ function SectionGrid(props) {
   if (props.horizontal === "true") {
     return <div class="flex overflow-x-auto pt-4 pb-4">{grid}</div>;
   } else {
-    return <div class="grid grid-cols-1 md:grid-cols-3 gap-4">{grid}</div>;
+    return <div class="grid grid-cols-3 md:grid-cols-3 gap-4">{grid}</div>;
   }
 }
 

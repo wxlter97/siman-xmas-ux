@@ -32,7 +32,7 @@ function CategoryCarousel(props) {
           <div key={index} className="carousel-item">
             <div className="category-image" onClick={() => window.open(category.link, "_self")}>
               {category.image.includes("/static/media/") ? (
-                <img src={category.image} alt={category.name} />
+                <img src={category.image} alt={category.name}></img>
               ) : (
                 <div className="text-carousel">{category.image}</div>
               )}

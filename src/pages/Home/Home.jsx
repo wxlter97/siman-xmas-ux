@@ -167,7 +167,7 @@ function getImages(folder_name, grid) {
         `/block_0` +
         i +
         `.png`),
-      col: 1,
+      col: folder_name.includes("mobile") ? 3 : grid[i - 1],
       row: grid[i - 1],
     });
   }
