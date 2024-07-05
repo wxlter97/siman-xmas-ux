@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/siman-xmas-ux/static/css/main.befddd04.css",
-    "main.js": "/siman-xmas-ux/static/js/main.baac3bb6.js",
+    "main.css": "/siman-xmas-ux/static/css/main.a08a7fbd.css",
+    "main.js": "/siman-xmas-ux/static/js/main.e6b467a9.js",
     "static/js/453.a77ea548.chunk.js": "/siman-xmas-ux/static/js/453.a77ea548.chunk.js",
     "static/media/block_04.png": "/siman-xmas-ux/static/media/block_04.0fa4263f6c51a1415d34.png",
     "static/media/main.png": "/siman-xmas-ux/static/media/main.2009d36e4dcca41fee82.png",
@@ -29,12 +29,12 @@
     "static/media/slick.ttf": "/siman-xmas-ux/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/siman-xmas-ux/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/siman-xmas-ux/index.html",
-    "main.befddd04.css.map": "/siman-xmas-ux/static/css/main.befddd04.css.map",
-    "main.baac3bb6.js.map": "/siman-xmas-ux/static/js/main.baac3bb6.js.map",
+    "main.a08a7fbd.css.map": "/siman-xmas-ux/static/css/main.a08a7fbd.css.map",
+    "main.e6b467a9.js.map": "/siman-xmas-ux/static/js/main.e6b467a9.js.map",
     "453.a77ea548.chunk.js.map": "/siman-xmas-ux/static/js/453.a77ea548.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.befddd04.css",
-    "static/js/main.baac3bb6.js"
+    "static/css/main.a08a7fbd.css",
+    "static/js/main.e6b467a9.js"
   ]
 }
