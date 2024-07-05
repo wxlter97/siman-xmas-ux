@@ -176,8 +176,8 @@ function getImages(folder_name, grid) {
 }
 
 function Home() {
-  const [selectedCategory, setSelectedCategory] = useState("collections");
-  const [subCategories, setSubCategories] = useState(categories.collections);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [subCategories, setSubCategories] = useState([]);
 
   useEffect(() => {
     setSubCategories(categories[selectedCategory]);
@@ -194,7 +194,11 @@ function Home() {
             className={`chips-hero ${
               selectedCategory === "collections" ? "selected" : ""
             }`}
-            onClick={() => setSelectedCategory("collections")}
+            onClick={() =>
+              selectedCategory === "collections"
+                ? setSelectedCategory("")
+                : setSelectedCategory("collections")
+            }
           >
             <div
               className={`text-hero ${
@@ -208,7 +212,11 @@ function Home() {
             className={`chips-hero ${
               selectedCategory === "products" ? "selected" : ""
             }`}
-            onClick={() => setSelectedCategory("products")}
+            onClick={() =>
+              selectedCategory === "products"
+                ? setSelectedCategory("")
+                : setSelectedCategory("products")
+            }
           >
             <div
               className={`text-hero ${
@@ -222,7 +230,11 @@ function Home() {
             className={`chips-hero ${
               selectedCategory === "colors" ? "selected" : ""
             }`}
-            onClick={() => setSelectedCategory("colors")}
+            onClick={() =>
+              selectedCategory === "colors"
+                ? setSelectedCategory("")
+                : setSelectedCategory("colors")
+            }
           >
             <div
               className={`text-hero ${
@@ -236,7 +248,11 @@ function Home() {
             className={`chips-hero ${
               selectedCategory === "fashion" ? "selected" : ""
             }`}
-            onClick={() => setSelectedCategory("fashion")}
+            onClick={() =>
+              selectedCategory === "fashion"
+                ? setSelectedCategory("")
+                : setSelectedCategory("fashion")
+            }
           >
             <div
               className={`text-hero ${
@@ -269,9 +285,7 @@ function Home() {
           horizontal="true"
           mobile="false"
         />
-        <div
-          className="copy-navidad"
-        >
+        <div className="copy-navidad">
           ¡Descubre la magia de la Navidad con SIMÁN! 🎄🎁✨
         </div>
         <SectionDivider img={Banner2} />
@@ -285,9 +299,7 @@ function Home() {
       <div className="w-11/12 mx-auto md:hidden">
         <SectionDivider img={Banner1Mobile} />
         <SectionGrid imgs={getImages("mobile/B1", [3, 3, 3, 3])} />
-        <div
-          className="copy-navidad"
-        >
+        <div className="copy-navidad">
           ¡Descubre la magia de la Navidad con SIMÁN! 🎄🎁✨
         </div>
         <SectionGrid

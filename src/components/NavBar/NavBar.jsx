@@ -21,7 +21,7 @@ const NavBar = () => (
     <div className="navbar-container justify-center flex">
       {/* Logo para desktop */}
       <div className="basis-1/16 logo hidden md:flex">
-        <Link to="/">
+        <Link to="/siman-xmas-ux">
           <img src={logo} alt="siman.com" className="logo-image" />
         </Link>
       </div>
@@ -35,7 +35,7 @@ const NavBar = () => (
       </div>
       {/* Logo para mobile */}
       <div className="logo md:hidden">
-        <Link to="/">
+        <Link to="/siman-xmas-ux">
           <img src={logo} alt="siman.com" className="logo-image" />
         </Link>
       </div>

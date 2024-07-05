@@ -44,7 +44,7 @@ const PageNotFound = () => {
     <Container>
       <Title>404</Title>
       <Subtitle>Página no encontrada</Subtitle>
-      <Button as={Link} to="/">Volver al inicio</Button>
+      <Button as={Link} to="/siman-xmas-ux">Volver al inicio</Button>
     </Container>
   );
 };

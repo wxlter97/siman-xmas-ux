@@ -17,7 +17,7 @@ const App = () => (
     <Banner />
     <NavBar />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/siman-xmas-ux" element={<Home />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     <Footer />

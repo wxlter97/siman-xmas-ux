@@ -23,12 +23,12 @@ function CategoryCarousel(props) {
     }
   }, [props.categories]);
 
-  const settings = getSettings(props.categories.length);
+  const settings = getSettings(props.categories?.length);
 
   return (
     <div className="carousel-container">
       <Slider ref={sliderRef} {...settings}>
-        {props.categories.map((category, index) => (
+        {props.categories?.map((category, index) => (
           <div key={index} className="carousel-item">
             <div className="category-image" onClick={() => window.open(category.link, "_self")}>
               {category.image.includes("/static/media/") ? (
