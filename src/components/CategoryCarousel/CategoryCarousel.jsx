@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "./CategoryCarousel.scss";
+import { Link } from "react-router-dom";
 
 // Configuración del carrusel
 const getSettings = (numCategories) => ({
@@ -30,14 +31,16 @@ function CategoryCarousel(props) {
       <Slider ref={sliderRef} {...settings}>
         {props.categories?.map((category, index) => (
           <div key={index} className="carousel-item">
-            <div className="category-image" onClick={() => window.open(category.link, "_self")}>
-              {category.image.includes("/static/media/") ? (
-                <img src={category.image} alt={category.name}></img>
-              ) : (
-                <div className="text-carousel">{category.image}</div>
-              )}
-            </div>
-            <p>{category.name}</p>
+            <Link to={category.link}>
+              <div className="category-image">
+                {category.image.includes("/static/media/") ? (
+                  <img src={category.image} alt={category.name}></img>
+                ) : (
+                  <div className="text-carousel">{category.image}</div>
+                )}
+              </div>
+              <p>{category.name}</p>
+            </Link>
           </div>
         ))}
       </Slider>
