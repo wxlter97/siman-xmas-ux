@@ -167,7 +167,7 @@ function getImages(folder_name, grid) {
         `/block_0` +
         i +
         `.png`),
-      col: folder_name.includes("mobile") ? 3 : grid[i - 1],
+      col: folder_name.includes("mobile") ? 3 : 1,
       row: grid[i - 1],
     });
   }
@@ -272,13 +272,14 @@ function Home() {
         <SectionGrid
           imgs={getImages("sections/01_berry", [1, 2, 2, 1])}
           tags={[
-            { top: "15%", left: "15%", link: "/berry" },
-            { top: "40%", left: "19%" },
-            { top: "30%", left: "40%" },
-            { top: "39%", left: "68%" },
-            { top: "70%", left: "45%" },
-            { top: "85%", left: "25%" },
+            { top: "15%", left: "15%", link: "berry" },
+            { top: "40%", left: "19%", link: "berry" },
+            { top: "30%", left: "40%", link: "berry" },
+            { top: "39%", left: "68%", link: "berry" },
+            { top: "70%", left: "45%", link: "berry" },
+            { top: "85%", left: "25%", link: "berry" },
           ]}
+          imgs_labels={["Árbol y Guirnaldas", "Villas", "Esferas", "Luces"]}
         />
         <SectionGrid
           imgs={getImages("mobile/B5", [3, 3, 3])}
@@ -289,11 +290,25 @@ function Home() {
           ¡Descubre la magia de la Navidad con SIMÁN! 🎄🎁✨
         </div>
         <SectionDivider img={Banner2} />
-        <SectionGrid imgs={getImages("sections/02_holi", [2, 1, 2, 1])} />
+        <SectionGrid
+          imgs={getImages("sections/02_holi", [2, 1, 2, 1])}
+          imgs_labels={[
+            "Ádornos navideños",
+            "Nacimientos",
+            "Árboles navideños",
+            "Decoración",
+          ]}
+        />
         <SectionDivider img={Banner3} />
-        <SectionGrid imgs={getImages("sections/03_candy", [2, 2, 1, 1])} />
+        <SectionGrid
+          imgs={getImages("sections/03_candy", [2, 2, 1, 1])}
+          imgs_labels={["Cojines", "Adornos", "Luces", ""]}
+        />
         <SectionDivider img={Banner4} />
-        <SectionGrid imgs={getImages("sections/04_wonderful", [1, 2, 2, 1])} />
+        <SectionGrid
+          imgs={getImages("sections/04_wonderful", [1, 2, 2, 1])}
+          imgs_labels={["Cojines", "Luces", "Árboles navideños", "Adornos"]}
+        />
         <NewProducts />
       </div>
       <div className="w-11/12 mx-auto md:hidden">

@@ -77,6 +77,13 @@ function SectionGrid(props) {
             Ver productos
           </div>
         );
+      } else if (img.col === 1 && props.imgs_labels) {
+        // Agregar texto en la esquina de las imagenes
+        tags.push(
+          <div className="label-overlay" style={{ bottom: "2%", left: "2%", width: "96%" }}>
+            {props.imgs_labels[index-1]}
+          </div>
+        );
       }
       return (
         <div class={style + " relative"} key={index}>
